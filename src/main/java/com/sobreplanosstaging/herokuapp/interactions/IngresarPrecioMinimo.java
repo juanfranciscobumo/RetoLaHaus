@@ -29,7 +29,7 @@ public class IngresarPrecioMinimo implements Interaction {
             actor.attemptsTo(Enter.theValue(precio).into(target));
         } else {
             if (pais.equals(MEXICO.getAtributo())) {
-                actor.attemptsTo(Evaluate.javascript(String.format(ID_PRECIO_ONE, precio.substring(0, 1) + ".0")));
+                actor.attemptsTo(Evaluate.javascript(String.format(ID_PRECIO_ONE, precio.substring(0, 1))));
             } else {
                 actor.attemptsTo(Evaluate.javascript(String.format(ID_PRECIO_ONE, precio.substring(0, 3))));
             }

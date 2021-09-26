@@ -67,6 +67,7 @@ dependencies {
 }
 
 test {
+    maxParallelForks = Runtime.runtime.availableProcessors()
     ignoreFailures = true
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
