@@ -4,6 +4,9 @@ import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 public class FiltrosPage {
+    private FiltrosPage(){
+
+    }
 
     public static final Target CHECK_ESTADO = Target.the("Checkbox estado de la propiedad")
             .locatedBy("//div[@class='filters-form']/div[6]/ul/li[contains(text(),'{0}')]/i");

@@ -3,6 +3,9 @@ package com.sobreplanosstaging.herokuapp.userinterfaces;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class BusquedaPage {
+    private BusquedaPage(){
+
+    }
 
     public static final Target MODAL = Target.the("Modal país")
             .locatedBy("//ul[@class='subnav-links']");

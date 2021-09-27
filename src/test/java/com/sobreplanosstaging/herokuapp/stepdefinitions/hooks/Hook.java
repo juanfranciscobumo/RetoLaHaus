@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class Hook {
     @Before()
-    public void setTheStage() {
+    public void iniciarActor() {
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActor(Constantes.ACTOR);
     }

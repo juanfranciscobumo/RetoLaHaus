@@ -7,7 +7,7 @@ public class BusquedaBuilder implements BusquedaInterface {
     private String pais;
     private String ciudad;
     private String barrio;
-    private String tipo_propiedad;
+    private String tipoPropiedad;
     private String habitaciones;
     private BusquedaModel busqueda = new BusquedaModel();
 
@@ -19,8 +19,8 @@ public class BusquedaBuilder implements BusquedaInterface {
         return new BusquedaBuilder(pais);
     }
 
-    public BusquedaBuilder tipoDePropiedad(String tipo_propiedad) {
-        this.tipo_propiedad = tipo_propiedad;
+    public BusquedaBuilder tipoDePropiedad(String tipoPropiedad) {
+        this.tipoPropiedad = tipoPropiedad;
         return this;
     }
 
@@ -42,7 +42,7 @@ public class BusquedaBuilder implements BusquedaInterface {
     @Override
     public BusquedaModel build() {
         busqueda.setPais(this.pais);
-        busqueda.setTipo_propiedad(this.tipo_propiedad);
+        busqueda.setTipo_propiedad(this.tipoPropiedad);
         busqueda.setHabitaciones(this.habitaciones);
         busqueda.setBarrio(this.barrio);
         busqueda.setCiudad(this.ciudad);
