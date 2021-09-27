@@ -12,17 +12,11 @@ environment {
                 git url: "${REPO}", branch: "${RAMA}"
             }
         }
-         stage('Sonarqube') {
-         environment {
-         scannerHome = tool 'SonarQubeScanner'
-    }
+         stage('Sonarqube') {        
+  
              steps {
-                withSonarQubeEnv('sonarqube') {
-                sh "${scannerHome}/bin/sonar-scanner"
-        }
-              timeout(time: 10, unit: 'MINUTES') {
-              waitForQualityGate abortPipeline: true
-        }
+echo 'Escaneando código...'
+bat gradle sonarqube
     }
 	}	
         stage('Build') {
