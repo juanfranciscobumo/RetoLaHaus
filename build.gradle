@@ -9,7 +9,13 @@ repositories {
     mavenCentral()
     jcenter()
 }
-
+sonarqube {
+    properties {
+        property "sonar.projectKey", "sonarlahaus"
+        property "sonar.organization", "sonarlahaus"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
 buildscript {
     repositories {
         mavenCentral()
@@ -17,7 +23,7 @@ buildscript {
     }
     dependencies {
         classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.34")
-        classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3")
+        classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.2.0")
         classpath("net.serenity-bdd:serenity-single-page-report:2.4.48")
     }
 }
@@ -40,13 +46,7 @@ sonarqube {
 serenity {
     reports = ["single-page-html"]
 }
-subprojects {
-    sonarqube {
-        properties {
-            property "sonar.sources", "src"
-        }
-    }
-}
+
 dependencies {
 
     compile libs.test.serenity.core,

@@ -74,7 +74,7 @@ public class OpenDriver implements DriverSource {
 				options.setExperimentalOption(MOBILE_EMULATION.getAtributo(), mobileEmulation);
 				return new ChromeDriver(options);
 			}
-			case "remote_driver": {
+			case "remoteDriver": {
 				DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 				desiredCapabilities.setCapability(ACCEPT_INSECURE_CERTS.getAtributo(), true);
 				desiredCapabilities.setCapability(BROWSER_NAME, System.getProperty(REMOTE_DRIVER.getAtributo()));
