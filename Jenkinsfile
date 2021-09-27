@@ -16,7 +16,7 @@ environment {
   
              steps {
 echo 'Escaneando código...'
-bat gradle sonarqube
+bat 'gradle sonarqube'
     }
 	}	
         stage('Build') {
