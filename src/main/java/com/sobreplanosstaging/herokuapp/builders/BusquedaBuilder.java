@@ -42,7 +42,7 @@ public class BusquedaBuilder implements BusquedaInterface {
     @Override
     public BusquedaModel build() {
         busqueda.setPais(this.pais);
-        busqueda.setTipo_propiedad(this.tipoPropiedad);
+        busqueda.setTipoPropiedad(this.tipoPropiedad);
         busqueda.setHabitaciones(this.habitaciones);
         busqueda.setBarrio(this.barrio);
         busqueda.setCiudad(this.ciudad);

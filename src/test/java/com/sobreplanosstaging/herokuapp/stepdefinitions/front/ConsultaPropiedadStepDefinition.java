@@ -39,7 +39,7 @@ public class ConsultaPropiedadStepDefinition {
                 .pais(datos.get(0).getPais())
                 .ciudad(datos.get(0).getCiudad())
                 .barrio(datos.get(0).getBarrio())
-                .tipoDePropiedad(datos.get(0).getTipo_propiedad())
+                .tipoDePropiedad(datos.get(0).getTipoPropiedad())
                 .habitaciones(datos.get(0).getHabitaciones())));
     }
 

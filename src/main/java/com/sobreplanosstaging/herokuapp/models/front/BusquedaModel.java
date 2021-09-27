@@ -4,7 +4,7 @@ public class BusquedaModel {
     private String pais;
     private String ciudad;
     private String barrio;
-    private String tipo_propiedad;
+    private String tipoPropiedad;
     private String habitaciones;
 
     public String getPais() {
@@ -31,12 +31,12 @@ public class BusquedaModel {
         this.barrio = barrio;
     }
 
-    public String getTipo_propiedad() {
-        return tipo_propiedad;
+    public String getTipoPropiedad() {
+        return tipoPropiedad;
     }
 
-    public void setTipo_propiedad(String tipo_propiedad) {
-        this.tipo_propiedad = tipo_propiedad;
+    public void setTipoPropiedad(String tipoPropiedad) {
+        this.tipoPropiedad = tipoPropiedad;
     }
 
     public String getHabitaciones() {

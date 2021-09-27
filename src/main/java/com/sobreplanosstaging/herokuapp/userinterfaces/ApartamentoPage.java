@@ -3,6 +3,9 @@ package com.sobreplanosstaging.herokuapp.userinterfaces;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class ApartamentoPage {
+    private ApartamentoPage(){
+
+    }
 
     public static final Target TXT_HABITACIONES = Target.the("Texto número de habitaciones")
             .locatedBy("/html/body/main/div/div[10]/div/div[1]/section[1]/div[2]/p");

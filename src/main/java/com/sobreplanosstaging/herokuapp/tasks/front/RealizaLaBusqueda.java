@@ -15,7 +15,7 @@ public class RealizaLaBusqueda implements Task {
     private String pais;
     private String ciudad;
     private String barrio;
-    private String tipo_propiedad;
+    private String tipoPropiedad;
     private String habitaciones;
 
     public RealizaLaBusqueda(BusquedaModel busqueda) {
@@ -23,7 +23,7 @@ public class RealizaLaBusqueda implements Task {
         this.barrio = busqueda.getBarrio();
         this.ciudad = busqueda.getCiudad();
         this.habitaciones = busqueda.getHabitaciones();
-        this.tipo_propiedad = busqueda.getTipo_propiedad();
+        this.tipoPropiedad = busqueda.getTipoPropiedad();
     }
 
     @Override
@@ -33,7 +33,7 @@ public class RealizaLaBusqueda implements Task {
                 Click.on(BTN_PAIS.of(pais)),
                 Enter.theValue(ciudad).into(INPUT_CIUDAD),
                 Click.on(LISTA_ZONAS.of(ciudad)),
-                Click.on(LISTA_TIPO_PROPIEDAD.of(tipo_propiedad)),
+                Click.on(LISTA_TIPO_PROPIEDAD.of(tipoPropiedad)),
                 IngresarNumero.deUnidades(habitaciones, BTN_INCREMENTAR_HABITACIONES, TXT_HABITACIONES),
                 Click.on(BTN_BUSCAR));
 

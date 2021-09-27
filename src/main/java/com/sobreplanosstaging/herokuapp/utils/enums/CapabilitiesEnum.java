@@ -18,11 +18,11 @@ public enum CapabilitiesEnum {
     WEBDRIVER_IE_DRIVER("webdriver.ie.driver"),
     WEBDRIVER_CHROME_DRIVER("webdriver.chrome.driver"),
 
-    RUTA_MOZILLA("drivers/geckodriver.exe"),
-    RUTA_CHROME("drivers/chromedriver.exe"),
-    RUTA_OPERA("drivers/operadriver.exe"),
-    RUTA_EDGE("drivers/msedgedriver.exe"),
-    RUTA_INTERNET_EXPLORER("drivers/IEDriverServer.exe"),
+    RUTA_MOZILLA("src/test/resources/drivers/geckodriver.exe"),
+    RUTA_CHROME("src/test/resources/drivers/chromedriver.exe"),
+    RUTA_OPERA("src/test/resources/drivers/operadriver.exe"),
+    RUTA_EDGE("src/test/resources/drivers/msedgedriver.exe"),
+    RUTA_INTERNET_EXPLORER("src/test/resources/drivers/IEDriverServer.exe"),
 
     PRIVATE_MOZILLA("-private"),
     PRIVATE_OPERA("private"),

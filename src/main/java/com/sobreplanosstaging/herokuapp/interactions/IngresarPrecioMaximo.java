@@ -1,6 +1,5 @@
 package com.sobreplanosstaging.herokuapp.interactions;
 
-import com.sobreplanosstaging.herokuapp.utils.enums.TagsEnum;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
