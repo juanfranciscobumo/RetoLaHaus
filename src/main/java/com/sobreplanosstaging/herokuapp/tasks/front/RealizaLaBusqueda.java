@@ -32,7 +32,7 @@ public class RealizaLaBusqueda implements Task {
                 MoveMouse.to(MODAL),
                 Click.on(BTN_PAIS.of(pais)),
                 Enter.theValue(ciudad).into(INPUT_CIUDAD),
-                Click.on(LISTA_CIUDADES.of(barrio)),
+                Click.on(LISTA_ZONAS.of(ciudad)),
                 Click.on(LISTA_TIPO_PROPIEDAD.of(tipo_propiedad)),
                 IngresarNumero.deUnidades(habitaciones, BTN_INCREMENTAR_HABITACIONES, TXT_HABITACIONES),
                 Click.on(BTN_BUSCAR));

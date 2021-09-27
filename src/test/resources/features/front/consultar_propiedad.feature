@@ -20,6 +20,6 @@ Característica: Consultar propiedad
       | <habitaciones> | <baños> | <parqueaderos> | <precio> |
     Ejemplos: Datos de entrada
       | pais     | ciudad   | barrio   | tipo_propiedad | habitaciones | estado | precioDesde | precioHasta | parqueaderos | baños | areaMinima | areaMaxima | precio |
-      | Colombia | Medellín | Medellín | apartamentos   | 3            | Nuevo  | 100000000   | 10000000000 | 1            | 2     | 70         | 110        | 463    |
+      | Colombia | Medellín | Pajarito | apartamentos   | 3            | Nuevo  | 100000000   | 500000000   | 1            | 2     | 30         | 110        | 463    |
      # | Colombia | Bogotá           | Bogotá     | casas          | 3            | Usado  | 200000000   | 600000000   | 1            | 2     | 30         | 200        | 285    |
-     # | México   | Ciudad de México | Xochimilco | casas          | 3            | Usado  | 1000000     | 9000000     | 2            | 2     | 110        | 370        | 8.42   |
+     # | México | Ciudad de México | Ciudad de México | departamentos  | 3            | Usado  | 1000000     | 6000000     | 1            | 2     | 70        | 110        | 3.5    |

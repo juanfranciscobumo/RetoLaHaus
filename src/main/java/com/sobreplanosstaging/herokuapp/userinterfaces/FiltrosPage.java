@@ -48,4 +48,14 @@ public class FiltrosPage {
 
     public static final Target BTN_INMUEBLE = Target.the("Botón inmueble")
             .locatedBy("//div[@class='client-cards']/article/div/div[2]/p[contains(text(),'${0} millones')]");
+
+
+    public static final Target TXT_TOTAL_REGISTROS = Target.the("Total de registros")
+            .locatedBy("//*[@id='srp-app']/div[1]/div[3]/div[2]/div[1]/h1/span");
+
+    public static final Target TXT_TOTAL_REGISTROS_PAGINA = Target.the("Total de registros por página")
+            .locatedBy("//div[@class='client-cards']/article");
+
+      public static final Target BTN_AVANZAR_PAGINA = Target.the("Botón siguiente página")
+            .locatedBy("//li[@class='transform -rotate-90']");
 }

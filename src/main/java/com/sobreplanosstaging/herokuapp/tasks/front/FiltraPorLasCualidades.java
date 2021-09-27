@@ -43,7 +43,7 @@ public class FiltraPorLasCualidades implements Task {
                 MoverBarraDerecha.hastaElDato(areaMinima, BARRA_AREA_MINIMA, INPUT_AREA_MINIMA),
                 MoverBarraIzquieda.hastaElDato(areaMaxima, BARRA_AREA_MAXIMA, INPUT_AREA_MAXIMA),
                 Click.on(BTN_APLICAR_PRECIO),
-                Click.on(BTN_INMUEBLE.of(precio)),
+                BuscaLaPagina.conLasPropiedades(precio),
                 Switch.toNewWindow());
     }
 

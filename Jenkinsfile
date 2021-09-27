@@ -33,7 +33,7 @@ bat 'gradle sonarqube'
                   allowMissing: false,
                   alwaysLinkToLastBuild: false,
                   keepAll: true,
-                  reportDir: '/target/site/serenity',
+                  reportDir: 'target/site/serenity',
                   reportFiles: 'index.html',
                   reportName: "Reporte de serenity"
     ])

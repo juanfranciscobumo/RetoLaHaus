@@ -4,7 +4,9 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java-library'
 apply plugin: 'org.sonarqube'
-
+compileJava.options.encoding = 'Cp1252'
+compileTestJava.options.encoding = 'Cp1252'
+javadoc.options.encoding = 'Cp1252'
 repositories {
     mavenCentral()
     jcenter()

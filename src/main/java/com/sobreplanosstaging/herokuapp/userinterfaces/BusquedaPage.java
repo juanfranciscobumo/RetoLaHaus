@@ -13,8 +13,8 @@ public class BusquedaPage {
     public static final Target INPUT_CIUDAD = Target.the("Campo ingresar ciudad")
             .locatedBy("//div[@id='live-search']//input");
 
-    public static final Target LISTA_CIUDADES = Target.the("Lista ciudades ciudad")
-            .locatedBy("//div[.='{0}']");
+    public static final Target LISTA_ZONAS = Target.the("Lista de zonas")
+            .locatedBy("//div[@id='live-search']/ul/li/div[2][contains(text(),'{0}')]");
 
     public static final Target LISTA_TIPO_PROPIEDAD = Target.the("Lista tipo de propiedad")
             .locatedBy("//li[@data-value='{0}']");
