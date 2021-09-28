@@ -6,12 +6,6 @@ pipeline {
         RAMA = 'master'
     }
     stages {
-        stage('Habilitación de ambiente') {
-            steps {
-                echo 'Habilitando el ambiente...'
-                bat 'docker-compose up'
-            }
-        }
         stage('Descargar codigo') {
             steps {
                 echo 'Descargando código...'
@@ -41,12 +35,6 @@ pipeline {
                   reportFiles: 'index.html',
                   reportName: 'Reporte de serenity'
                               ])
-            }
-        }
-        stage('Desactivación de ambiente') {
-            steps {
-                echo 'Desactivando el ambiente...'
-                bat 'docker-compose down'
             }
         }
     }
