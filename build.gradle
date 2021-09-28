@@ -14,8 +14,8 @@ repositories {
 sonarqube {
     properties {
         property "sonar.projectKey", "sonarlahaus"
-        property "sonar.login", "admin"
-        property "sonar.password", "admin"
+        property "sonar.login", "runner"
+        property "sonar.password", "runner"
         property "sonar.host.url", "http://localhost:9000"
     }
 }

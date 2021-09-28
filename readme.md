@@ -62,9 +62,14 @@
 * gradle clean test aggregate -Ddriver=browser //este comando sirve para ejecutar la prueba en un navegador, se permite mozilla, opera, firefox, edge, internet explorer, chrome.
 * gradle clean test aggregate -Ddriver=remoteDriver -Dremote=Browser //este comando sirve para ejecutar la prueba de manera remota, se permite los navegadores, opera, mozilla, chrome.
 
-# Comandos para activar el ambiente
+# Requerimientos para correr las pruebas en Jenkins
 
-* docker-compose up //sirve para activar el selenium grid para ejecutar la prueba remota.
+* Se debe tener instalado sonarqube y corriendo
+* Tener selenium grid corriendo
+
+# Selenium grid
+
+* docker-compose up - para activar el selenium grid.
 
 ## Autor
 
