@@ -21,7 +21,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Corriendo los test...'
-                bat 'gradle clean test aggregate -Ddriver=remoteDriver -Dremote=firefox'
+                bat 'gradle clean test aggregate -Ddriver=remoteDriver -Dremote=chrome'
             }
         }
         stage('Publish report') {
