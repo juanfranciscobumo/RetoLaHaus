@@ -3,11 +3,11 @@
 
 # Prueba automatizada para realizar la consulta de un inmueble y de servicios rest
 
-#Funcionalidades
+## Funcionalidades
 
 * Consultar inmueble
 
-#Servicios Rest
+## Servicios Rest
 
 * Consultar usuario
 * Crear usuario
