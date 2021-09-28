@@ -10,7 +10,6 @@ public class FiltrosBuilder implements FiltrosInterface {
     private String areaMinima;
     private String areaMaxima;
     private String apartamento;
-    private String pais;
     private FiltrosModel filtros = new FiltrosModel();
 
     public FiltrosBuilder(String estado) {
@@ -19,11 +18,6 @@ public class FiltrosBuilder implements FiltrosInterface {
 
     public static FiltrosBuilder estadoDeLaPropiedad(String estado) {
         return new FiltrosBuilder(estado);
-    }
-
-    public FiltrosBuilder pais(String pais) {
-        this.pais = pais;
-        return this;
     }
 
     public FiltrosBuilder apartamento(String apartamento) {
@@ -59,7 +53,6 @@ public class FiltrosBuilder implements FiltrosInterface {
         filtros.setAreaMaxima(this.areaMaxima);
         filtros.setAreaMinima(this.areaMinima);
         filtros.setApartamento(this.apartamento);
-        filtros.setPais(this.pais);
         return filtros;
     }
 }

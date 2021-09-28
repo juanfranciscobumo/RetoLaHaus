@@ -11,7 +11,7 @@ import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeT
 
 public class BorraUsuarioStepDefinition {
     @Cuando("se ingrese el código del usuario a borrar {string}")
-    public void seIngreseElCódigoDelUsuarioABorrar(String usuario) {
+    public void seIngreseElCodigoDelUsuarioABorrar(String usuario) {
         theActorInTheSpotlight().attemptsTo(BorraElUsuario.enRegres(usuario));
     }
 

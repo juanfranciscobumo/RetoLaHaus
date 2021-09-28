@@ -25,7 +25,7 @@ public class BuscaUsuarioStepDefinition {
     }
 
     @Cuando("se ingrese el código del usuario a consultar {string}")
-    public void seIngreseElCódigoDelUsuarioAConsultar(String usuario) {
+    public void seIngreseElCodigoDelUsuarioAConsultar(String usuario) {
         theActorInTheSpotlight().attemptsTo(ConsultaElUsuario.enRegres(usuario));
     }
 

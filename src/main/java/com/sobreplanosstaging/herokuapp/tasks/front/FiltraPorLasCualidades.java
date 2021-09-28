@@ -16,7 +16,6 @@ public class FiltraPorLasCualidades implements Task {
     private String areaMinima;
     private String areaMaxima;
     private String apartamento;
-    private String pais;
 
     public FiltraPorLasCualidades(FiltrosModel filtro) {
         this.estado = filtro.getEstado();
@@ -25,7 +24,6 @@ public class FiltraPorLasCualidades implements Task {
         this.areaMaxima = filtro.getAreaMaxima();
         this.areaMinima = filtro.getAreaMinima();
         this.apartamento = filtro.getApartamento();
-        this.pais = filtro.getPais();
     }
 
     @Override

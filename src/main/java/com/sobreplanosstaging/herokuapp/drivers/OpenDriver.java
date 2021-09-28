@@ -92,6 +92,8 @@ public class OpenDriver implements DriverSource {
         } catch (NullPointerException | MalformedURLException e) {
             logger.log(WARNING, e.getMessage());
             options.addArguments(MAXIMIZE.getAtributo());
+            options.addArguments("--headless");
+            options.addArguments("--window-size=400,800");
             options.addArguments(PRIVATE_GOOGLE.getAtributo());
             options.setPageLoadStrategy(EAGER);
             System.setProperty(WEBDRIVER_CHROME_DRIVER.getAtributo(), RUTA_CHROME.getAtributo());

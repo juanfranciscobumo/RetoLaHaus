@@ -51,7 +51,6 @@ public class ConsultaPropiedadStepDefinition {
                 .areaMinima(datos.get(0).getAreaMinima())
                 .areaMaxima(datos.get(0).getAreaMaxima())
                 .apartamento(datos.get(0).getApartamento())
-                .pais(datos.get(0).getPais())
                 .bannos(datos.get(0).getBannos())));
     }
 
