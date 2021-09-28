@@ -4,17 +4,11 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.MoveMouse;
-import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import java.time.Duration;
 import java.util.List;
 
-import static com.sobreplanosstaging.herokuapp.userinterfaces.BusquedaPage.LISTA_ZONAS;
 import static com.sobreplanosstaging.herokuapp.userinterfaces.FiltrosPage.*;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 
 public class BuscaLaPagina implements Interaction {
 

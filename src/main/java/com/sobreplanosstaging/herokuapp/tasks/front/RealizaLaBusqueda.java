@@ -17,7 +17,6 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClic
 
 public class RealizaLaBusqueda implements Task {
     private String pais;
-    private String ciudad;
     private String tipoPropiedad;
     private String habitaciones;
     private String barrio;

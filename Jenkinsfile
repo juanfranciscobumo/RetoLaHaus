@@ -21,15 +21,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Corriendo los test...'
-                bat 'gradle clean test aggregate -Ddriver=remoteDriver -Dremote=chrome'
+                bat 'gradle clean test aggregate -Ddriver=remoteDriver -Dremote=firefox'
             }
         }
         stage('Publish report') {
             steps {
                 echo 'Publicando reporte de serenity...'
                 publishHTML (target: [
-                  allowMissing: false,
-                  alwaysLinkToLastBuild: false,
+                  allowMissing: true,
+                  alwaysLinkToLastBuild: true,
                   keepAll: true,
                   reportDir: 'target/site/serenity',
                   reportFiles: 'index.html',
