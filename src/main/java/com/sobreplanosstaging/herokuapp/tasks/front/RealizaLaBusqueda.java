@@ -14,13 +14,11 @@ import static com.sobreplanosstaging.herokuapp.userinterfaces.BusquedaPage.*;
 public class RealizaLaBusqueda implements Task {
     private String pais;
     private String ciudad;
-    private String barrio;
     private String tipoPropiedad;
     private String habitaciones;
 
     public RealizaLaBusqueda(BusquedaModel busqueda) {
         this.pais = busqueda.getPais();
-        this.barrio = busqueda.getBarrio();
         this.ciudad = busqueda.getCiudad();
         this.habitaciones = busqueda.getHabitaciones();
         this.tipoPropiedad = busqueda.getTipoPropiedad();

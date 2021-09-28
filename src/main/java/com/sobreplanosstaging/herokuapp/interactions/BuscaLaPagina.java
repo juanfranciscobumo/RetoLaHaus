@@ -20,6 +20,11 @@ public class BuscaLaPagina implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         List<String> propiedades = Text.of(TXT_TOTAL_REGISTROS_PAGINA).viewedBy(actor).asList();
         int total = Integer.parseInt(TXT_TOTAL_REGISTROS.resolveFor(actor).getText().split(" ")[0]);
         while (true) {
