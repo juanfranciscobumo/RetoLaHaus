@@ -35,7 +35,7 @@ public class OpenDriver implements DriverSource {
     @Override
     public WebDriver newDriver() {
         try {
-            switch (System.getProperty(ENVIROMENT.getAtributo())) {
+            switch (System.getProperty(DRIVER.getAtributo())) {
                 case "mozilla":
                     System.setProperty(CapabilitiesEnum.WEBDRIVER_GECKO_DRIVER.getAtributo(), RUTA_MOZILLA.getAtributo());
                     firefoxOptions.addArguments(CapabilitiesEnum.PRIVATE_MOZILLA.getAtributo());

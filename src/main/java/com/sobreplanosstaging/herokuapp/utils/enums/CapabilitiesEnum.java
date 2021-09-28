@@ -10,7 +10,7 @@ public enum CapabilitiesEnum {
     CHROME_MOBILE("mobile"),
     REMOTE_DRIVER("remote"),
 
-    ENVIROMENT("environment"),
+    DRIVER("driver"),
 
     WEBDRIVER_GECKO_DRIVER("webdriver.gecko.driver"),
     WEBDRIVER_EDGE_DRIVER("webdriver.edge.driver"),
