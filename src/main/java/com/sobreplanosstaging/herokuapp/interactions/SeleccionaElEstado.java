@@ -6,8 +6,8 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 
 import static com.sobreplanosstaging.herokuapp.userinterfaces.FiltrosPage.CHECK_ESTADO;
-import static com.sobreplanosstaging.herokuapp.utils.enums.EstadoPropiedadesEnum.NUEVO;
-import static com.sobreplanosstaging.herokuapp.utils.enums.EstadoPropiedadesEnum.USADO;
+import static com.sobreplanosstaging.herokuapp.userinterfaces.FiltrosPage.CHECK_ESTADO_PROYECTO;
+import static com.sobreplanosstaging.herokuapp.utils.enums.EstadoPropiedadesEnum.*;
 
 
 public class SeleccionaElEstado implements Interaction {
@@ -20,12 +20,20 @@ public class SeleccionaElEstado implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        if (estado.equals(NUEVO.getAtributo())) {
-            actor.attemptsTo(Click.on(CHECK_ESTADO.of(USADO.getAtributo())));
-        } else {
-            actor.attemptsTo(Click.on(CHECK_ESTADO.of(NUEVO.getAtributo())));
+        switch (estado) {
+            case "Nuevo":
+                actor.attemptsTo(Click.on(CHECK_ESTADO.of(USADO.getAtributo())));
+                break;
+            case "Usado":
+                actor.attemptsTo(Click.on(CHECK_ESTADO.of(NUEVO.getAtributo())));
+                break;
+            case "En construcción":
+            case "Finalizado":
+                actor.attemptsTo(Click.on(CHECK_ESTADO_PROYECTO.of(estado)));
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + estado);
         }
-
     }
 
     public static SeleccionaElEstado deLaPropiedad(String estado) {

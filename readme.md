@@ -3,6 +3,18 @@
 
 # Prueba automatizada para realizar la consulta de un inmueble y de servicios rest
 
+#Funcionalidades
+
+* Consultar inmueble
+
+#Servicios Rest
+
+* Consultar usuario
+* Crear usuario
+* Modificar usuario
+* Eliminar usuario
+
+
 # ![Serenity BDD](docs/serenity.png "Logo Title Text 1")
 
 ## Framework

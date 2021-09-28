@@ -5,13 +5,11 @@ import com.sobreplanosstaging.herokuapp.models.front.FiltrosModel;
 
 public class FiltrosBuilder implements FiltrosInterface {
     private String estado;
-    private String precioDesde;
-    private String precioHasta;
     private String parqueaderos;
     private String bannos;
     private String areaMinima;
     private String areaMaxima;
-    private String precio;
+    private String apartamento;
     private String pais;
     private FiltrosModel filtros = new FiltrosModel();
 
@@ -23,23 +21,13 @@ public class FiltrosBuilder implements FiltrosInterface {
         return new FiltrosBuilder(estado);
     }
 
-    public FiltrosBuilder precioDesde(String precioDesde) {
-        this.precioDesde = precioDesde;
-        return this;
-    }
-
     public FiltrosBuilder pais(String pais) {
         this.pais = pais;
         return this;
     }
 
-    public FiltrosBuilder precioHasta(String precioHasta) {
-        this.precioHasta = precioHasta;
-        return this;
-    }
-
-    public FiltrosBuilder precio(String precio) {
-        this.precio = precio;
+    public FiltrosBuilder apartamento(String apartamento) {
+        this.apartamento = apartamento;
         return this;
     }
 
@@ -68,11 +56,9 @@ public class FiltrosBuilder implements FiltrosInterface {
         filtros.setBannos(this.bannos);
         filtros.setEstado(this.estado);
         filtros.setParqueaderos(this.parqueaderos);
-        filtros.setPrecioDesde(this.precioDesde);
-        filtros.setPrecioHasta(this.precioHasta);
         filtros.setAreaMaxima(this.areaMaxima);
         filtros.setAreaMinima(this.areaMinima);
-        filtros.setPrecio(this.precio);
+        filtros.setApartamento(this.apartamento);
         filtros.setPais(this.pais);
         return filtros;
     }

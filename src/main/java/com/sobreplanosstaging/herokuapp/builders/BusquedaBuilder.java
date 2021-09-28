@@ -5,7 +5,6 @@ import com.sobreplanosstaging.herokuapp.models.front.BusquedaModel;
 
 public class BusquedaBuilder implements BusquedaInterface {
     private String pais;
-    private String ciudad;
     private String barrio;
     private String tipoPropiedad;
     private String habitaciones;
@@ -21,11 +20,6 @@ public class BusquedaBuilder implements BusquedaInterface {
 
     public BusquedaBuilder tipoDePropiedad(String tipoPropiedad) {
         this.tipoPropiedad = tipoPropiedad;
-        return this;
-    }
-
-    public BusquedaBuilder ciudad(String ciudad) {
-        this.ciudad = ciudad;
         return this;
     }
 
@@ -45,7 +39,6 @@ public class BusquedaBuilder implements BusquedaInterface {
         busqueda.setTipoPropiedad(this.tipoPropiedad);
         busqueda.setHabitaciones(this.habitaciones);
         busqueda.setBarrio(this.barrio);
-        busqueda.setCiudad(this.ciudad);
         return busqueda;
     }
 }

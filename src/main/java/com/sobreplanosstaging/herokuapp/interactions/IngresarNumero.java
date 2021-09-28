@@ -22,8 +22,9 @@ public class IngresarNumero implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         while (true) {
-            actor.attemptsTo(Click.on(targetButton));
-            if (targetTexto.resolveFor(actor).getText().equals(unidades)) {
+            if (!targetTexto.resolveFor(actor).getText().equals(unidades)) {
+                actor.attemptsTo(Click.on(targetButton));
+            } else {
                 break;
             }
         }

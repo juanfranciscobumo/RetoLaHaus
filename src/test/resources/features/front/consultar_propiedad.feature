@@ -10,16 +10,17 @@ Característica: Consultar propiedad
   Esquema del escenario: Consultar propiedad
     Dado que el usuario se encuentre en sobreplanos-staging
     Cuando ingrese los datos de la propiedad que desee consultar
-      | pais   | ciudad   | barrio   | tipoPropiedad   | habitaciones   |
-      | <pais> | <ciudad> | <barrio> | <tipoPropiedad> | <habitaciones> |
+      | pais   | barrio   | tipoPropiedad   | habitaciones   |
+      | <pais> | <barrio> | <tipoPropiedad> | <habitaciones> |
     Cuando filtre por las cualidades de la propiedad
-      | pais   | estado   | precioDesde   | precioHasta   | parqueaderos   | baños   | areaMinima   | areaMaxima   | precio   |
-      | <pais> | <estado> | <precioDesde> | <precioHasta> | <parqueaderos> | <baños> | <areaMinima> | <areaMaxima> | <precio> |
+      | pais   | estado   | parqueaderos   | baños   | areaMinima   | areaMaxima   | apartamento   |
+      | <pais> | <estado> | <parqueaderos> | <baños> | <areaMinima> | <areaMaxima> | <apartamento> |
     Entonces el usuario vera los datos del inmueble buscado
-      | habitaciones   | baños   | parqueaderos   | precio   |
-      | <habitaciones> | <baños> | <parqueaderos> | <precio> |
+      | habitaciones   | baños   | parqueaderos   | apartamento   |
+      | <habitaciones> | <baños> | <parqueaderos> | <apartamento> |
     Ejemplos: Datos de entrada
-      | pais     | ciudad           | barrio           | tipoPropiedad | habitaciones | estado | precioDesde | precioHasta | parqueaderos | baños | areaMinima | areaMaxima | precio |
-      | Colombia | Medellín         | Pajarito         | apartamentos  | 3            | Nuevo  | 100000000   | 500000000   | 1            | 2     | 30         | 110        | 463    |
-     # | Colombia | Bogotá           | Bogotá           | casas         | 3            | Usado  | 200000000   | 600000000   | 1            | 2     | 30         | 200        | 285    |
-    #  | México   | Ciudad de México | Ciudad de México | departamentos | 3            | Usado  | 1000000     | 6000000     | 1            | 2     | 70         | 110        | 3.5    |
+      | pais     | barrio           | tipoPropiedad         | habitaciones | estado          | parqueaderos | baños | areaMinima | areaMaxima | apartamento             |
+      | Colombia | Medellín         | apartamentos          | 3            | Nuevo           | 1            | 2     | 30         | 110        | Riviera De Bulerías     |
+      | Colombia | Bogotá           | casas                 | 3            | Nuevo           | 3            | 4     | 110        | 370        | Camino Del Bosque Casas |
+      | México   | Ciudad de México | departamentos         | 3            | Nuevo           | 1            | 2     | 70         | 110        | Residencial Progreso 88 |
+      | Colombia | Bogotá           | proyectos-de-vivienda | 3            | En construcción | 1            | 2     | 30         | 110        | Roble                   |

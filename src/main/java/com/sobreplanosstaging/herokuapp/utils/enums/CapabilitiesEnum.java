@@ -1,13 +1,7 @@
 package com.sobreplanosstaging.herokuapp.utils.enums;
 
 public enum CapabilitiesEnum {
-    CHROME("chrome"),
-    OPERA("opera"),
-    EDGE("edge"),
-    MOZILLA("mozilla"),
-    INTERNET_EXPLORER("explorer"),
-    SAFARI("safari"),
-    CHROME_MOBILE("mobile"),
+
     REMOTE_DRIVER("remote"),
 
     DRIVER("driver"),

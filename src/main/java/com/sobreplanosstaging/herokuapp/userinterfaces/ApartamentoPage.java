@@ -3,7 +3,7 @@ package com.sobreplanosstaging.herokuapp.userinterfaces;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class ApartamentoPage {
-    private ApartamentoPage(){
+    private ApartamentoPage() {
 
     }
 
@@ -16,7 +16,7 @@ public class ApartamentoPage {
     public static final Target TXT_PARQUEADEROS = Target.the("Texto número de parqueaderos")
             .locatedBy("/html/body/main/div/div[10]/div/div[1]/section[1]/div[4]/p");
 
-    public static final Target TXT_PRECIO_INMUEBLE = Target.the("Texto precio del inmueble")
-            .locatedBy("//*[@id='pdp-info-box-form']/div/div[1]/p[2]");
+    public static final Target TXT_PROYECTO = Target.the("Texto nombre del proyecto")
+            .locatedBy("/html/body/main/div/section[1]/h1");
 
 }

@@ -2,9 +2,7 @@ package com.sobreplanosstaging.herokuapp.utils.enums;
 
 public enum EstadoPropiedadesEnum {
     USADO("Usado"),
-    NUEVO("Nuevo"),
-    FINALIZADO("Finalizado"),
-    EN_CONSTRUCCCION("En construcción");
+    NUEVO("Nuevo");
     private String atributo;
 
     EstadoPropiedadesEnum(String atributo) {
