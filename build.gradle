@@ -11,7 +11,14 @@ repositories {
     mavenCentral()
     jcenter()
 }
-
+sonarqube {
+    properties {
+        property "sonar.projectKey", "lahaus"
+        property "sonar.login", "admin"
+        property "sonar.password", "runner"
+        property "sonar.host.url", "http://localhost:9000"
+    }
+}
 buildscript {
     repositories {
         mavenCentral()
