@@ -40,7 +40,13 @@ pipeline {
                   reportDir: 'target/site/serenity',
                   reportFiles: 'index.html',
                   reportName: 'Reporte de serenity'
-    ])
+                              ])
+            }
+        }
+        stage('Desactivación de ambiente') {
+            steps {
+                echo 'Desactivando el ambiente...'
+                bat 'docker-compose down'
             }
         }
     }
