@@ -27,7 +27,6 @@ public class MoverBarraIzquieda implements Interaction {
                 break;
             } else {
                 new Actions(BrowseTheWeb.as(actor).getDriver()).moveToElement(priceSlider)
-                        .click()
                         .dragAndDropBy(priceSlider, -i, 0)
                         .build()
                         .perform();

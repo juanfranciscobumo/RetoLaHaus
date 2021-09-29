@@ -21,6 +21,6 @@ Característica: Consultar propiedad
     Ejemplos: Datos de entrada
       | pais     | barrio           | tipoPropiedad         | habitaciones | estado          | parqueaderos | baños | areaMinima | areaMaxima | apartamento             |
       | Colombia | Medellín         | apartamentos          | 3            | Nuevo           | 1            | 2     | 30         | 110        | Riviera De Bulerías     |
-      | Colombia | Bogotá           | casas                 | 3            | Nuevo           | 3            | 4     | 110        | 370        | Camino Del Bosque Casas |
-      | México   | Ciudad de México | departamentos         | 3            | Nuevo           | 1            | 2     | 70         | 110        | Residencial Progreso 88 |
-      | Colombia | Bogotá           | proyectos-de-vivienda | 3            | En construcción | 1            | 2     | 30         | 110        | Roble                   |
+    #  | Colombia | Bogotá           | casas                 | 3            | Nuevo           | 3            | 4     | 110        | 370        | Camino Del Bosque Casas |
+    #  | México   | Ciudad de México | departamentos         | 3            | Nuevo           | 1            | 2     | 70         | 110        | Residencial Progreso 88 |
+    #  | Colombia | Bogotá           | proyectos-de-vivienda | 3            | En construcción | 1            | 2     | 30         | 110        | Roble                   |

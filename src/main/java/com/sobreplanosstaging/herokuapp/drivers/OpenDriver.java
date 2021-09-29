@@ -77,7 +77,6 @@ public class OpenDriver implements DriverSource {
                 case "remoteDriver":
                     DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                     desiredCapabilities.setCapability(ACCEPT_INSECURE_CERTS.getAtributo(), true);
-                    desiredCapabilities.setCapability("browserVersion", "85.0.4183.83");
                     desiredCapabilities.setCapability(BROWSER_NAME, System.getProperty(REMOTE_DRIVER.getAtributo()));
                     return new RemoteWebDriver(new URL(URL_REMOTE.getAtributo()), desiredCapabilities);
 
