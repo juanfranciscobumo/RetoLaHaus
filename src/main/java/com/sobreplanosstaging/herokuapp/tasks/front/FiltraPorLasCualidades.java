@@ -32,8 +32,8 @@ public class FiltraPorLasCualidades implements Task {
                 SeleccionaElEstado.deLaPropiedad(estado),
                 IngresarNumero.deUnidades(parqueaderos, BTN_INCREMENTAR_PARQUEADERO, TXT_NUMERO_PARQUEADEROS),
                 IngresarNumero.deUnidades(bannos, BTN_INCREMENTAR_BANNOS, TXT_NUMERO_BANNOS),
-                MoverBarraDerecha.hastaElDato(areaMinima, BARRA_AREA_MINIMA, INPUT_AREA_MINIMA),
-                MoverBarraIzquieda.hastaElDato(areaMaxima, BARRA_AREA_MAXIMA, INPUT_AREA_MAXIMA),
+                MueveLaBarra.hacia(areaMinima, BARRA_AREA_MINIMA, INPUT_AREA_MINIMA, 2),
+                MueveLaBarra.hacia(areaMaxima, BARRA_AREA_MAXIMA, INPUT_AREA_MAXIMA, -2),
                 BuscaLaPagina.conLasPropiedades(apartamento),
                 Switch.toNewWindow());
     }

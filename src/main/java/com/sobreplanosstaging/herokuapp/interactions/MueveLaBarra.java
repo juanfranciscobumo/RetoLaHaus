@@ -8,33 +8,35 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.interactions.Actions;
 
-public class MoverBarraDerecha implements Interaction {
+public class MueveLaBarra implements Interaction {
     private String datoBuscado;
     private Target targetBarra;
     private Target targetInput;
+    private int direccion;
 
-    public MoverBarraDerecha(String datoBuscado, Target targetBarra, Target targetInput) {
+    public MueveLaBarra(String datoBuscado, Target targetBarra, Target targetInput, int direccion) {
         this.datoBuscado = datoBuscado;
         this.targetBarra = targetBarra;
         this.targetInput = targetInput;
+        this.direccion = direccion;
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Scroll.to(targetInput));
-        for (int i = 0; i < 150; i++) {
+        while (true) {
             if (targetInput.resolveFor(actor).getValue().equals(datoBuscado)) {
                 break;
             } else {
                 new Actions(BrowseTheWeb.as(actor).getDriver())
-                        .dragAndDropBy(targetBarra.resolveFor(actor), 2, 0)
+                        .dragAndDropBy(targetBarra.resolveFor(actor), direccion, 0)
                         .build()
                         .perform();
             }
         }
     }
 
-    public static MoverBarraDerecha hastaElDato(String datoBuscado, Target targetBarra, Target targetInput) {
-        return Tasks.instrumented(MoverBarraDerecha.class, datoBuscado, targetBarra, targetInput);
+    public static MueveLaBarra hacia(String datoBuscado, Target targetBarra, Target targetInput, int direccion) {
+        return Tasks.instrumented(MueveLaBarra.class, datoBuscado, targetBarra, targetInput, direccion);
     }
 }
