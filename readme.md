@@ -82,18 +82,18 @@
 
 # Comandos para ejecutar el proyecto.
 
-* gradle clean test aggregate /este comando ejecuta todo el proyecto.
-* gradle clean test aggregate -Ddriver=browser //este comando sirve para ejecutar la prueba en un navegador, se permite mozilla, opera, firefox, edge, internet explorer, chrome.
-* gradle clean test aggregate -Ddriver=remoteDriver -Dremote=Browser //este comando sirve para ejecutar la prueba de manera remota, se permite los navegadores, opera, mozilla, chrome.
+* gradle clean test aggregate /Este comando ejecuta todo el proyecto.
+* gradle clean test aggregate -Ddriver=browser //este comando sirve para ejecutar la prueba en un navegador, se permite firefox y chrome.
+* gradle clean test aggregate -Ddriver=remote -Dremote=Browser //este comando sirve para ejecutar la prueba de manera remota, se permite los navegadores firefox y chrome.
 
 # Requerimientos para correr las pruebas en Jenkins
 
-* Se debe tener instalado sonarqube y corriendo
-* Tener selenium grid corriendo
+* Se debe tener acceso a sonarqube o sonarcloud y modificar el build.gradle con las credenciales.
+* Tener zalenium corriendo
 
-# Selenium grid
+# Zalenium
 
-* docker-compose up - para activar el selenium grid.
+* docker-compose up - para activar el zalenium.
 
 ## Autor
 
