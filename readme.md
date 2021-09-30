@@ -74,7 +74,7 @@
 * Exceptions: Son las excepciones que se visualizan cuando un test falla o tiene errores. 
 * Interfaces: Es una clase abstracta que se utiliza para agrupar métodos relacionados con cuerpos vacíos.
 * Utils: En este package van las clases que son útiles para la construcción de la automatización, como cambiar formato de fecha, leer archivo, etc.
-* Userinterfaces= Es una clase que donde se ingresan los elementos html o css de la página a automatizar.
+* Userinterfaces: Es una clase que donde se ingresan los elementos html o css de la página a automatizar.
 
 # Requerimientos
 
