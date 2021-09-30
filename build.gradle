@@ -15,7 +15,7 @@ sonarqube {
     properties {
         property "sonar.projectKey", "sonarlahaus"
         property "sonar.organization", "sonarlahaus"
-        property "sonar.login","96aeffb9014ed0f8c228660f98d4683db6320cb0"
+        property "sonar.login", "96aeffb9014ed0f8c228660f98d4683db6320cb0"
         property "sonar.host.url", "https://sonarcloud.io"
     }
 }
@@ -70,7 +70,7 @@ dependencies {
 }
 
 test {
-  //  maxParallelForks = Runtime.runtime.availableProcessors()
+    maxParallelForks = Runtime.runtime.availableProcessors()
     ignoreFailures = true
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
