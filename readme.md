@@ -39,6 +39,30 @@
 
 * Es una herramienta que permite escribir los casos de prueba.
 
+# ![Serenity BDD](docs/jenkins.png "Logo Title Text 1")
+
+### Jenkins
+
+* Es un servidor de integración continua, gratuito, open-source.
+
+# ![Serenity BDD](docs/sonar.png "Logo Title Text 1")
+
+### Sonarqube
+
+* Es una plataforma para evaluar código fuente. Es software libre y usa diversas herramientas de análisis estático de código fuente como Checkstyle, PMD o FindBugs para obtener métricas que pueden ayudar a mejorar la calidad del código de un programa.
+
+# ![Serenity BDD](docs/selenium.png "Logo Title Text 1")
+
+### Selenium
+
+* Selenium es un entorno de pruebas de software para aplicaciones basadas en la web. Selenium provee una herramienta de grabar/reproducir para crear pruebas sin usar un lenguaje de scripting para pruebas.
+
+# ![Serenity BDD](docs/zalenium.png "Logo Title Text 1")
+
+### Zalenium
+
+* Es el resultado de mezclar Zalando y Selenium. El objetivo de este proyecto es proporcionar una forma sencilla de crear una cuadrícula y contribuir a la comunidad de Selenium.
+
 ## La estructura completa del proyecto es la siguiente:
 
 * Features: Utiliza lenguaje Gherkin y contienen los escenarios de negocio del caso de prueba. 

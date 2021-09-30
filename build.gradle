@@ -13,10 +13,10 @@ repositories {
 }
 sonarqube {
     properties {
-        property "sonar.projectKey", "lahaus"
-        property "sonar.login", "admin"
-        property "sonar.password", "runner"
-        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.projectKey", "sonarlahaus"
+        property "sonar.organization", "sonarlahaus"
+        property "sonar.login","96aeffb9014ed0f8c228660f98d4683db6320cb0"
+        property "sonar.host.url", "https://sonarcloud.io"
     }
 }
 buildscript {

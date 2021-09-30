@@ -4,10 +4,9 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.targets.Target;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 
 public class MoverBarraDerecha implements Interaction {
     private String datoBuscado;
@@ -22,13 +21,13 @@ public class MoverBarraDerecha implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        WebElement priceSlider = targetBarra.resolveFor(actor).getElement();
-        for (int i = 0; i < priceSlider.getSize().getWidth(); i++) {
+        actor.attemptsTo(Scroll.to(targetInput));
+        for (int i = 0; i < 150; i++) {
             if (targetInput.resolveFor(actor).getValue().equals(datoBuscado)) {
                 break;
             } else {
-                new Actions(BrowseTheWeb.as(actor).getDriver()).moveToElement(priceSlider)
-                        .dragAndDropBy(priceSlider, i, 0)
+                new Actions(BrowseTheWeb.as(actor).getDriver())
+                        .dragAndDropBy(targetBarra.resolveFor(actor), 2, 0)
                         .build()
                         .perform();
             }

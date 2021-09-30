@@ -52,4 +52,5 @@ public class FiltrosPage {
 
     public static final Target BTN_AVANZAR_PAGINA = Target.the("Botón siguiente página")
             .locatedBy("//li[@class='transform -rotate-90']");
+
 }
