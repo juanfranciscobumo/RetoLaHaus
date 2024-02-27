@@ -7,16 +7,16 @@ public class ApartamentoPage {
 
     }
 
-    public static final Target TXT_HABITACIONES = Target.the("Texto número de habitaciones")
-            .locatedBy("/html/body/main/div/div[10]/div/div[1]/section[1]/div[2]/p");
+    public static final Target TXT_HABITACIONES = Target.the("Texto nÃºmero de habitaciones")
+            .locatedBy("//p[contains(text(),'Habitaciones')]/following-sibling::p");
 
-    public static final Target TXT_BANNOS = Target.the("Texto número de baños")
-            .locatedBy("/html/body/main/div/div[10]/div/div[1]/section[1]/div[3]/p");
+    public static final Target TXT_BANNOS = Target.the("Texto nÃºmero de baÃ±os")
+            .locatedBy("//p[contains(text(),'BaÃ±os')]/following-sibling::p");
 
-    public static final Target TXT_PARQUEADEROS = Target.the("Texto número de parqueaderos")
+    public static final Target TXT_PARQUEADEROS = Target.the("Texto nÃºmero de parqueaderos")
             .locatedBy("/html/body/main/div/div[10]/div/div[1]/section[1]/div[4]/p");
 
     public static final Target TXT_PROYECTO = Target.the("Texto nombre del proyecto")
-            .locatedBy("/html/body/main/div/section[1]/h1");
+            .locatedBy("//*[@id='content-description']/div[2]/h1");
 
 }

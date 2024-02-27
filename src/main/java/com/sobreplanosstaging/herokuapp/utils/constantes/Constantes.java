@@ -8,6 +8,6 @@ public class Constantes {
     public static final String ENDPOINT_REGRES = "https://reqres.in";
     public static final String RECURSO_BUSCAR_USUARIO = "/api/users/%s";
     public static final String RECURSO_CREAR_USUARIO = "/api/users";
-    public static final String URL_SOBRE_PLANOS = "https://sobreplanos-staging.herokuapp.com/";
+    public static final String URL_SOBRE_PLANOS = "https://www.lahaus.com/";
 
 }

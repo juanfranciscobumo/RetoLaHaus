@@ -3,8 +3,8 @@ package com.sobreplanosstaging.herokuapp.utils.enums;
 public enum TagsEnum {
     NAME("name"),
     JOB("job"),
-    MEXICO("México"),
-    CODIGO_RESPUESTA("Código de respuesta");
+    MEXICO("MÃ©xico"),
+    CODIGO_RESPUESTA("CÃ³digo de respuesta");
     private String atributo;
 
     TagsEnum(String atributo) {

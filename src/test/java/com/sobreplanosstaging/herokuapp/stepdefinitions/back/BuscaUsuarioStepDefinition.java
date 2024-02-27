@@ -24,7 +24,7 @@ public class BuscaUsuarioStepDefinition {
         theActorInTheSpotlight().whoCan(CallAnApi.at(Constantes.ENDPOINT_REGRES));
     }
 
-    @Cuando("se ingrese el código del usuario a consultar {string}")
+    @Cuando("se ingrese el cÃ³digo del usuario a consultar {string}")
     public void seIngreseElCodigoDelUsuarioAConsultar(String usuario) {
         theActorInTheSpotlight().attemptsTo(ConsultaElUsuario.enRegres(usuario));
     }

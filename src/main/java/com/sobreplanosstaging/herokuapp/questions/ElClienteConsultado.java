@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.annotations.Subject;
 
 import static net.serenitybdd.rest.SerenityRest.lastResponse;
 
-@Subject("Se devuelve el código del usuario")
+@Subject("Se devuelve el cÃ³digo del usuario")
 public class ElClienteConsultado implements Question<Integer> {
 
     @Override

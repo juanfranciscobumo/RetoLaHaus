@@ -10,16 +10,12 @@ import net.serenitybdd.screenplay.actions.*;
 import static com.sobreplanosstaging.herokuapp.userinterfaces.FiltrosPage.*;
 
 public class FiltraPorLasCualidades implements Task {
-    private String estado;
-    private String parqueaderos;
     private String bannos;
     private String areaMinima;
     private String areaMaxima;
     private String apartamento;
 
     public FiltraPorLasCualidades(FiltrosModel filtro) {
-        this.estado = filtro.getEstado();
-        this.parqueaderos = filtro.getParqueaderos();
         this.bannos = filtro.getBannos();
         this.areaMaxima = filtro.getAreaMaxima();
         this.areaMinima = filtro.getAreaMinima();
@@ -29,12 +25,11 @@ public class FiltraPorLasCualidades implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                SeleccionaElEstado.deLaPropiedad(estado),
-                IngresarNumero.deUnidades(parqueaderos, BTN_INCREMENTAR_PARQUEADERO, TXT_NUMERO_PARQUEADEROS),
+                Scroll.to(BTN_INCREMENTAR_BANNOS),
                 IngresarNumero.deUnidades(bannos, BTN_INCREMENTAR_BANNOS, TXT_NUMERO_BANNOS),
-                MueveLaBarra.hacia(areaMinima, BARRA_AREA_MINIMA, INPUT_AREA_MINIMA, 2),
+                MueveLaBarra.hacia(areaMinima, BARRA_AREA_MINIMA, INPUT_AREA_MINIMA, 1),
                 MueveLaBarra.hacia(areaMaxima, BARRA_AREA_MAXIMA, INPUT_AREA_MAXIMA, -2),
-                BuscaLaPagina.conLasPropiedades(apartamento),
+                Click.on(APARTAMENTO.of(apartamento)),
                 Switch.toNewWindow());
     }
 

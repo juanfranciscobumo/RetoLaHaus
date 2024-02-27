@@ -6,6 +6,7 @@ import com.sobreplanosstaging.herokuapp.models.back.request.CreacionUsuarioReque
 public class CreacionUsuarioBuilder implements CreacionUsuarioInterface {
     private String name;
     private String job;
+    private int id;
 
     public CreacionUsuarioBuilder(String name) {
         this.name = name;
@@ -13,6 +14,11 @@ public class CreacionUsuarioBuilder implements CreacionUsuarioInterface {
 
     public static CreacionUsuarioBuilder name(String name) {
         return new CreacionUsuarioBuilder(name);
+    }
+
+    public CreacionUsuarioBuilder id(int id) {
+        this.id = id;
+        return this;
     }
 
     public CreacionUsuarioRequest job(String job) {

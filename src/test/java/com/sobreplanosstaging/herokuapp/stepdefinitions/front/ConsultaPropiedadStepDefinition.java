@@ -19,7 +19,6 @@ import java.util.List;
 
 import static com.sobreplanosstaging.herokuapp.exceptions.Exceptions.*;
 import static com.sobreplanosstaging.herokuapp.utils.constantes.Constantes.URL_SOBRE_PLANOS;
-import static com.sobreplanosstaging.herokuapp.utils.converters.CorrigeNombreProyecto.corregirNombreProyecto;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
@@ -37,20 +36,17 @@ public class ConsultaPropiedadStepDefinition {
     @Cuando("ingrese los datos de la propiedad que desee consultar")
     public void ingreseLosDatosDeLaPropiedadQueDeseeConsultar(List<BusquedaModel> datos) {
         theActorInTheSpotlight().attemptsTo(RealizaLaBusqueda.deLaPropiedad(BusquedaBuilder
-                .pais(datos.get(0).getPais())
-                .barrio(datos.get(0).getBarrio())
                 .tipoDePropiedad(datos.get(0).getTipoPropiedad())
+                .barrio(datos.get(0).getBarrio())
                 .habitaciones(datos.get(0).getHabitaciones())));
     }
 
     @Cuando("filtre por las cualidades de la propiedad")
     public void filtrePorLasCualidadesDeLaPropiedad(List<FiltrosModel> datos) {
         theActorInTheSpotlight().attemptsTo(FiltraPorLasCualidades.deLaPropiedad(FiltrosBuilder
-                .estadoDeLaPropiedad(datos.get(0).getEstado())
-                .parqueaderos(datos.get(0).getParqueaderos())
+                .apartamento(datos.get(0).getApartamento())
                 .areaMinima(datos.get(0).getAreaMinima())
                 .areaMaxima(datos.get(0).getAreaMaxima())
-                .apartamento(datos.get(0).getApartamento())
                 .bannos(datos.get(0).getBannos())));
     }
 
@@ -59,11 +55,9 @@ public class ConsultaPropiedadStepDefinition {
         theActorInTheSpotlight().should(
                 seeThat(ElInmuebleConsultado.conHabitacionesEs(), equalTo(datos.get(0).getHabitaciones()))
                         .orComplainWith(Exceptions.class, HABITACIONES),
-                seeThat(ElInmuebleConsultado.conParqueaderosEs(), equalTo(datos.get(0).getParqueaderos()))
-                        .orComplainWith(Exceptions.class, HABITACIONES),
                 seeThat(ElInmuebleConsultado.conBannosEs(), equalTo(datos.get(0).getBannos()))
-                        .orComplainWith(Exceptions.class, PARQUEADEROS),
-                seeThat(ElInmuebleConsultado.conNombre(), equalTo(corregirNombreProyecto(datos.get(0).getApartamento())))
+                        .orComplainWith(Exceptions.class, BANNOS),
+                seeThat(ElInmuebleConsultado.conNombre(), equalTo(datos.get(0).getApartamento()))
                         .orComplainWith(Exceptions.class, NOMBRE_PROYECTO));
     }
 }

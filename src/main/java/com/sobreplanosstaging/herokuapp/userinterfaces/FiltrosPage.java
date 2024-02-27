@@ -1,56 +1,32 @@
 package com.sobreplanosstaging.herokuapp.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
+import org.openqa.selenium.By;
 
 public class FiltrosPage {
     private FiltrosPage() {
 
     }
 
-    public static final Target CHECK_ESTADO = Target.the("Checkbox estado de la propiedad")
-            .locatedBy("//div[@class='filters-form']/div[6]/ul/li[contains(text(),'{0}')]/i");
+    public static final Target BTN_INCREMENTAR_BANNOS = Target.the("BotÃ³n incrementar baÃ±os")
+            .located(By.id("counter-increment-bathrooms"));
 
-    public static final Target CHECK_ESTADO_PROYECTO = Target.the("Checkbox estado de la propiedad")
-            .locatedBy("//div[@class='filters-form']/div[5]/ul/li[contains(text(),'{0}')]/i");
+    public static final Target TXT_NUMERO_BANNOS = Target.the("Texto nÃºmero de baÃ±os")
+            .locatedBy("//i[@id='counter-increment-bathrooms']/parent::button/preceding-sibling::span");
 
-    public static final String ID_PRECIO_ONE = "document.getElementById('12minInputId').value = '%s';";
+    public static final Target BARRA_AREA_MINIMA = Target.the("Barra area mÃ­nima")
+            .located(By.cssSelector("span[data-lh-id='filter-panel-desktop-area-slider-min-handler']"));
 
-    public static final String ID_PRECIO_DOS = "document.getElementById('12maxInputId').value = '%s';";
+    public static final Target BARRA_AREA_MAXIMA = Target.the("Barra area mÃ¡xima")
+            .located(By.cssSelector("span[data-lh-id='filter-panel-desktop-area-slider-max-handler']"));
+    public static final Target INPUT_AREA_MINIMA = Target.the("Input area mÃ­nima")
+            .located(By.id("area-slider-min"));
 
-    public static final Target BTN_INCREMENTAR_PARQUEADERO = Target.the("Botón incrementar parqueadero")
-            .locatedBy("//div[@class='filters-form']/div[8]/div[2]/div/button[2]");
+    public static final Target INPUT_AREA_MAXIMA = Target.the("Input area mÃ¡xima")
+            .located(By.id("area-slider-max"));
 
-    public static final Target TXT_NUMERO_PARQUEADEROS = Target.the("Texto número de parqueaderos")
-            .locatedBy("//div[@class='filters-form']/div[8]/div[2]/div/span");
 
-    public static final Target BTN_INCREMENTAR_BANNOS = Target.the("Botón incrementar baños")
-            .locatedBy("//div[@class='filters-form']/div[8]/div[3]/div/button[2]");
-
-    public static final Target TXT_NUMERO_BANNOS = Target.the("Texto número de baños")
-            .locatedBy("//div[@class='filters-form']/div[8]/div[3]/div/span");
-
-    public static final Target BARRA_AREA_MINIMA = Target.the("Barra area mínima")
-            .locatedBy("//div[@class='filters-form']/div[9]/div/div/div/div[2]/div/div[1]");
-
-    public static final Target BARRA_AREA_MAXIMA = Target.the("Barra area máxima")
-            .locatedBy("//div[@class='filters-form']/div[9]/div/div/div/div[2]/div/div[2]");
-
-    public static final Target INPUT_AREA_MINIMA = Target.the("Input area mínima")
-            .locatedBy("//div[@class='filters-form']/div[9]/div/div/div/div[1]/div[1]/input");
-
-    public static final Target INPUT_AREA_MAXIMA = Target.the("Input area máxima")
-            .locatedBy("//div[@class='filters-form']/div[9]/div/div/div/div[1]/div[2]/input");
-
-    public static final Target BTN_INMUEBLE = Target.the("Botón inmueble")
-            .locatedBy("//div[@class='client-cards' or 'server-cards']/article/div/div[2]/h3/a[contains(text(),'{0}')]");
-
-    public static final Target TXT_TOTAL_REGISTROS = Target.the("Total de registros")
-            .locatedBy("//*[@id='srp-app']/div[1]/div[3]/div[2]/div[1]/h1/span");
-
-    public static final Target TXT_TOTAL_REGISTROS_PAGINA = Target.the("Total de registros por página")
-            .locatedBy("//div[@class='client-cards']/article");
-
-    public static final Target BTN_AVANZAR_PAGINA = Target.the("Botón siguiente página")
-            .locatedBy("//li[@class='transform -rotate-90']");
+    public static final Target APARTAMENTO = Target.the("Total de registros por pÃ¡gina")
+            .locatedBy("//div[@class='client-cards']/article//h2[contains(text(),'{0}')]/parent::*");
 
 }

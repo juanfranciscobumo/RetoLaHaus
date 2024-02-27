@@ -1,18 +1,9 @@
 package com.sobreplanosstaging.herokuapp.models.front;
 
 public class BusquedaModel {
-    private String pais;
     private String barrio;
     private String tipoPropiedad;
     private String habitaciones;
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
 
     public String getBarrio() {
         return barrio;

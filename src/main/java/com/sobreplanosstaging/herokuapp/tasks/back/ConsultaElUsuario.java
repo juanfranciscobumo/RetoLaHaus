@@ -1,10 +1,10 @@
 package com.sobreplanosstaging.herokuapp.tasks.back;
 
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.rest.interactions.Get;
-import net.thucydides.core.annotations.Step;
 
 import static com.sobreplanosstaging.herokuapp.utils.constantes.Constantes.RECURSO_BUSCAR_USUARIO;
 import static io.restassured.http.ContentType.JSON;

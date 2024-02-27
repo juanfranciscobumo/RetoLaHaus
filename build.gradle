@@ -1,57 +1,25 @@
+plugins {
+    id 'java-library'
+    id 'eclipse'
+    id 'idea'
+    id "net.serenity-bdd.serenity-gradle-plugin" version "4.0.46"
+}
+
 defaultTasks 'clean', 'test', 'aggregate'
 
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java-library'
-apply plugin: 'org.sonarqube'
-compileJava.options.encoding = 'Cp1252'
-compileTestJava.options.encoding = 'Cp1252'
-javadoc.options.encoding = 'Cp1252'
 repositories {
     mavenCentral()
-    jcenter()
 }
-sonarqube {
-    properties {
-        property "sonar.projectKey", "sonarlahaus"
-        property "sonar.login", "4249eaf59a87a0fc4aedc404b6586cee34977b6c"
-        property "sonar.host.url", "http://localhost:9000"
-    }
-}
-buildscript {
-    repositories {
-        mavenCentral()
-        jcenter()
-    }
-    dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.34")
-        classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.2.0")
-        classpath("net.serenity-bdd:serenity-single-page-report:2.4.48")
-    }
-}
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'net.serenity-bdd.aggregator'
+
 apply from: "$rootDir/gradle/libraries.gradle"
 
-configurations.all {
-    resolutionStrategy {
-        force "io.cucumber:cucumber-core:${cucumberVersion}"
-    }
-}
-sonarqube {
-    properties {
-        property "sonar.sourceEncoding", "UTF-8"
-    }
-}
-serenity {
-    reports = ["single-page-html"]
-}
-
+sourceCompatibility = 11
+targetCompatibility = 11
 dependencies {
 
-    compile libs.test.serenity.core,
+    implementation libs.test.serenity.core,
             libs.test.cucumber.junit,
             libs.test.cucumber.java,
             libs.test.cucumber.core,
@@ -59,20 +27,22 @@ dependencies {
             libs.test.serenity.junit,
             libs.test.serenity.screenplayWebdriver,
             libs.test.serenity.cucumber,
-            libs.test.junit,
+            libs.test.junitPlatform,
+            libs.test.junitLauncher,
+            libs.test.junitVintage,
+            libs.test.junitJupiter,
             libs.test.serenity.rest,
             libs.test.assertj,
-            libs.slf4jApi,
+            libs.logback,
             libs.test.jacksonDatatype,
             libs.test.jacksonDataformat,
             libs.test.fillo
-}
 
+
+}
 test {
-    maxParallelForks = Runtime.runtime.availableProcessors()
-    ignoreFailures = true
-    testLogging.showStandardStreams = true
-    systemProperties System.getProperties()
+    useJUnitPlatform()
+
 }
 
 gradle.startParameter.continueOnFailure = true

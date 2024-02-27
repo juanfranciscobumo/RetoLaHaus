@@ -14,6 +14,7 @@ public class ActualizaUsuarioPatchStepDefinition {
     public void seIngresenLosDatosDelUsuarioAActualizarConPatch(List<CreacionUsuarioRequest> datos) {
         theActorInTheSpotlight().attemptsTo(ActualizaElUsuarioConPatch.conLosDatos(CreacionUsuarioBuilder
                 .name(datos.get(0).getName())
+                .id(datos.get(0).getId())
                 .job(datos.get(0).getJob())));
     }
 }

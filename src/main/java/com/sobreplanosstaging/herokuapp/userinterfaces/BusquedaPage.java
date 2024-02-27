@@ -1,20 +1,15 @@
 package com.sobreplanosstaging.herokuapp.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
+import org.openqa.selenium.By;
 
 public class BusquedaPage {
     private BusquedaPage(){
 
     }
 
-    public static final Target MODAL = Target.the("Modal país")
-            .locatedBy("//ul[@class='subnav-links']");
-
-    public static final Target BTN_PAIS = Target.the("Botón país")
-            .locatedBy("//div[.='{0}']");
-
     public static final Target INPUT_CIUDAD = Target.the("Campo ingresar ciudad")
-            .locatedBy("//div[@id='live-search']//input");
+            .located(By.cssSelector("input[placeholder='Busca por ciudad, zona o barrio']"));
 
     public static final Target LISTA_ZONAS = Target.the("Lista de zonas")
             .locatedBy("//div[@id='live-search']/ul/li/div[2][contains(text(),'{0}')]");
@@ -22,13 +17,13 @@ public class BusquedaPage {
     public static final Target LISTA_TIPO_PROPIEDAD = Target.the("Lista tipo de propiedad")
             .locatedBy("//li[@data-value='{0}']");
 
-    public static final Target BTN_INCREMENTAR_HABITACIONES = Target.the("Botón incrementar habitaciones")
+    public static final Target BTN_INCREMENTAR_HABITACIONES = Target.the("BotÃ³n incrementar habitaciones")
             .locatedBy("//div[@id='rooms-number-field-container']/div/div/div[2]/a[2]");
 
-    public static final Target TXT_HABITACIONES = Target.the("Texto número de habitaciones")
+    public static final Target TXT_HABITACIONES = Target.the("Texto nÃºmero de habitaciones")
             .locatedBy("//div[@id='rooms-number-field-container']/div/div/div[2]/div");
 
-    public static final Target BTN_BUSCAR = Target.the("Botón buscar")
-            .locatedBy("//*[@id='lh-home-v2']/section[1]/div/div[1]/form/div/div[4]/button");
+    public static final Target BTN_BUSCAR = Target.the("BotÃ³n buscar")
+            .located(By.cssSelector("button[data-lh-id='home-button-search']"));
 
 }

@@ -14,6 +14,7 @@ public class ActualizaUsuarioStepDefinition {
     public void seIngresenLosDatosDelUsuarioAActualizar(List<CreacionUsuarioRequest> datos) {
         theActorInTheSpotlight().attemptsTo(ActualizaElUsuario.conLosDatos(CreacionUsuarioBuilder
                 .name(datos.get(0).getName())
+                .id(datos.get(0).getId())
                 .job(datos.get(0).getJob())));
     }
 

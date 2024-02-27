@@ -10,7 +10,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
 
 public class BorraUsuarioStepDefinition {
-    @Cuando("se ingrese el código del usuario a borrar {string}")
+    @Cuando("se ingrese el cÃ³digo del usuario a borrar {string}")
     public void seIngreseElCodigoDelUsuarioABorrar(String usuario) {
         theActorInTheSpotlight().attemptsTo(BorraElUsuario.enRegres(usuario));
     }

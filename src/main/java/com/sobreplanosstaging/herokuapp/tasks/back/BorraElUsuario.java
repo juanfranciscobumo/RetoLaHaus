@@ -1,11 +1,11 @@
 package com.sobreplanosstaging.herokuapp.tasks.back;
 
 import com.sobreplanosstaging.herokuapp.utils.constantes.Constantes;
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.rest.interactions.Delete;
-import net.thucydides.core.annotations.Step;
 
 import static io.restassured.http.ContentType.JSON;
 

@@ -1,49 +1,35 @@
-version: '3.4'
+version: '3'
 services:
-  zalenium:
-    image: dosel/zalenium
-    container_name: zalenium
-    hostname: zalenium
-    tty: true
+  selenium-hub:
+    image: selenium/hub:4.1.2-20220217
+    container_name: selenium-hub
     ports:
-      - '4444:4444'
-    command: |
-      start --desiredContainers 2
-            --maxDockerSeleniumContainers 2
-            --screenWidth 1440 --screenHeight 900
-            --timeZone "America/Bogota"
-            --videoRecordingEnabled true
-            --sauceLabsEnabled false
-            --browserStackEnabled false
-            --testingBotEnabled false
-            --cbtEnabled false
-            --lambdaTestEnabled false
-            --startTunnel false
-    environment:
-      - HOST_UID
-      - HOST_GID
-      - SAUCE_USERNAME
-      - SAUCE_ACCESS_KEY
-      - BROWSER_STACK_USER
-      - BROWSER_STACK_KEY
-      - TESTINGBOT_KEY
-      - TESTINGBOT_SECRET
-      - CBT_USERNAME
-      - CBT_AUTHKEY
-      - LT_USERNAME
-      - LT_ACCESS_KEY
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"
+
+  chrome:
+    image: selenium/node-chrome:4.1.2-20220217
     volumes:
-      - '/tmp/videos:/home/seluser/videos'
-      - '/var/run/docker.sock:/var/run/docker.sock'
-  mock:
-    image: elgalu/selenium
-    container_name: elgalu_selenium
+      - /dev/shm:/dev/shm
     depends_on:
-      - zalenium
-    ports:
-      - '8080:8080'
-    tty: true
+      - selenium-hub
     environment:
-      - MOCK_SERVER_PORT=8080
-  
-  
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_MAX_SESSIONS=2
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+
+  firefox:
+    image: selenium/node-firefox:4.1.2-20220217
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_MAX_SESSIONS=2
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
