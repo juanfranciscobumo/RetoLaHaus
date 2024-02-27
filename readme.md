@@ -45,23 +45,11 @@
 
 * Es un servidor de integración continua, gratuito, open-source.
 
-# ![Serenity BDD](docs/sonar.png "Logo Title Text 1")
-
-### Sonarqube
-
-* Es una plataforma para evaluar código fuente. Es software libre y usa diversas herramientas de análisis estático de código fuente como Checkstyle, PMD o FindBugs para obtener métricas que pueden ayudar a mejorar la calidad del código de un programa.
-
 # ![Serenity BDD](docs/selenium.png "Logo Title Text 1")
 
 ### Selenium
 
 * Selenium es un entorno de pruebas de software para aplicaciones basadas en la web. Selenium provee una herramienta de grabar/reproducir para crear pruebas sin usar un lenguaje de scripting para pruebas.
-
-# ![Serenity BDD](docs/zalenium.png "Logo Title Text 1")
-
-### Zalenium
-
-* Es el resultado de mezclar Zalando y Selenium. El objetivo de este proyecto es proporcionar una forma sencilla de crear una cuadrícula y contribuir a la comunidad de Selenium.
 
 ## La estructura completa del proyecto es la siguiente:
 
@@ -78,23 +66,13 @@
 
 # Requerimientos
 
-* Java JDK 1.8 
+* Java JDK 11
 * Gestor de proyectos Gradle 
 
 # Comandos para ejecutar el proyecto.
 
-* gradle clean test aggregate /Este comando ejecuta todo el proyecto.
-* gradle clean test aggregate -Ddriver=browser //este comando sirve para ejecutar la prueba en un navegador, se permite firefox y chrome.
-* gradle clean test aggregate -Ddriver=remote -Dremote=Browser //este comando sirve para ejecutar la prueba de manera remota, se permite los navegadores firefox y chrome.
-
-# Requerimientos para correr las pruebas en Jenkins
-
-* Se debe tener acceso a sonarqube o sonarcloud y modificar el build.gradle con las credenciales.
-* Tener zalenium corriendo
-
-# Zalenium
-
-* docker-compose up - para activar el zalenium.
+* docker-compose up -d
+* gradle clean test aggregate
 
 ## Autor
 
